@@ -1,0 +1,44 @@
+package com.rajeev.smo.models;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import java.math.BigDecimal;
+
+@Data
+@Entity
+@Table(name = "style_variant")
+public class StyleVariant {
+    @Id
+    @Column(name = "style_variant_id")
+    private Long styleVariantId;
+
+    @Column(name = "style_id")
+    private Long styleId;
+
+    @Column(name = "button_id")
+    private Long buttonId;
+
+    @Column(name = "thread_id")
+    private Long threadId;
+
+    @Column(name = "gtg_id")
+    private String gtgId;
+
+    @Column(name = "size")
+    private String size;
+
+    @Column(name = "sleeve_type")
+    private String sleeveType;
+
+    @Column(name = "color")
+    private String color;
+
+    @Column(name = "consumption_per_shirt")
+    private BigDecimal consumptionPerShirt;
+
+    @Column(name = "no_of_shirts_target")
+    private Integer noOfShirtsTarget;
+
+    @Column(name = "status")
+    private String status;
+}
